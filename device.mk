@@ -127,6 +127,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk.vendor
 
 PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.disable_backpressure=1 \
     debug.sf.frame_rate_multiple_threshold=60 \
     ro.surface_flinger.refresh_rate_switching=true \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
