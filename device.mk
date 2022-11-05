@@ -33,4 +33,5 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AOSPAOnePlus9RTSystemUI \
     OnePlus9RTSettingsProvider
