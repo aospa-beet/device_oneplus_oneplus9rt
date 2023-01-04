@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     AOSPAOnePlus9RTFrameworks \
     AOSPAOnePlus9RTSystemUI \
     FrameworksResTarget \
+    SettingsProviderResTarget \
     SystemUIResTarget
 
 # Soong namespaces
