@@ -30,3 +30,7 @@ $(call inherit-product, device/oneplus/oneplus9/device.mk)
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus9rt
+
+# Overlays
+PRODUCT_PACKAGES += \
+    OnePlus9RTSettingsProvider
