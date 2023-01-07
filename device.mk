@@ -318,7 +318,7 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # Vendor
-$(call inherit-product, vendor/oneplus/oneplus9/oneplus9-vendor.mk)
+$(call inherit-product, vendor/oneplus/oneplus9rt/oneplus9rt-vendor.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
