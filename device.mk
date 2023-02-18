@@ -78,6 +78,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oplus
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.fp.template_updateflag=V1
+
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
