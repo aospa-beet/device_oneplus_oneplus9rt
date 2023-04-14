@@ -136,6 +136,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.primary_mixer_stages=9
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.sys.brightness.low.gamma=true
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sf.use_latest_hwc_vsync_period=0
 
 # FRP
