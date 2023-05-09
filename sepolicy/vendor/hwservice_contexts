@@ -10,3 +10,6 @@ vendor.oplus.hardware.orms::IOrmsHalProxy    u:object_r:vendor_hal_orms_hwservic
 
 # Osense
 vendor.oplus.hardware.osense.client::IOsenseHalReporter                 u:object_r:vendor_hal_osense_hwservice:s0
+
+# Vibrator
+vendor.aac.hardware.richtap.vibrator::IRichtapVibrator                  u:object_r:hal_vibrator_hwservice:s0
