@@ -45,6 +45,8 @@
 
 # Vibrator
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.oplus_marsche    u:object_r:hal_vibrator_default_exec:s0
+/dev/richtap_haptic                                                                       u:object_r:aac_richtap_dev_device:s0
+/(vendor|system/vendor)/bin/hw/vendor\.aac\.hardware\.richtap\.vibrator-service\.aac      u:object_r:hal_vibrator_default_exec:s0
 
 # Widevine
 /(odm|vendor/odm)/bin/hw/android\.hardware\.drm@1\.3-service\.widevine    u:object_r:vendor_hal_drm_widevine_exec:s0
