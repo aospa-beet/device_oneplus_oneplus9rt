@@ -123,6 +123,8 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Display
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk.vendor
 
