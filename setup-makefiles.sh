@@ -8,8 +8,8 @@
 
 set -e
 
-DEVICE=martini
-VENDOR=oneplus
+DEVICE=marsche
+VENDOR=oplus
 
 # Load extract utilities and do some sanity checks.
 MY_DIR="${BASH_SOURCE%/*}"

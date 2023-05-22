@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/oneplus/martini
+DEVICE_PATH := device/oplus/marsche
 
 include build/make/target/board/BoardConfigMainlineCommon.mk
 
@@ -129,7 +129,7 @@ KERNEL_DEFCONFIG := vendor/lahaina-qgki_defconfig
 USE_KERNEL_AOSP_LLVM := true
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := martini,OP5155L1,OP5154L1
+TARGET_OTA_ASSERT_DEVICE := marsche,OP5154L1,OP5155L1,RE58B2L1
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0xC000000
@@ -170,4 +170,4 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Touch
-TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_oneplus9
+TARGET_POWER_FEATURE_EXT_LIB := //$(DEVICE_PATH):libpowerfeature_ext_oplus

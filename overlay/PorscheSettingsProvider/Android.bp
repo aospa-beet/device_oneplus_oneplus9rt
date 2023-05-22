@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "OnePlus9SettingsProvider",
+    name: "PorscheSettingsProvider",
     device_specific: true,
 }

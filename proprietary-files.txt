@@ -1,6 +1,9 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0. Sections labeled with 'OOS' are
+## from LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0. 
+## Sections labeled with 'martini' are
 ## on latest OxygenOS which is MT2111_11_F.15 at present.
+## Sections labeled with 'porsche' are
+## on latest RealmeUI which is RMX3312_11.C.10 at present.
 
 # ADSPRPC
 vendor/bin/adsprpcd
@@ -22,7 +25,7 @@ vendor/lib64/libssc_default_listener.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# ADSP Modules - OOS
+# ADSP Modules - martini
 odm/lib/rfsa/adsp/aiboost/libaiboostubwc_skel.so|651cdf1888ef59a9250708217299cd784107fd93
 odm/lib/rfsa/adsp/aiboost/libQnnHtpAltPrepSkel.so|39acd91b22fe3d98eabdc49291088f43a9ac1ce6
 odm/lib/rfsa/adsp/aiboost/libQnnHtpSkel.so|01c70172a0cb243fa91923ecd200a4cb69ae3128
@@ -104,7 +107,14 @@ vendor/lib/rfsa/adsp/libVppQnnHtp.so|a74fde4a224a2a04b574ad7e51940be7afa5c302
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so|c9a79942e70e7457be68b64904bdaef9f3293bc5
 vendor/lib/rfsa/adsp/libworker_pool.so|fbcc7b31b3d679510b455de727fd3459b893b5eb
 
-# Adreno - OOS
+# ADSP modules - porsche
+odm/lib/rfsa/adsp/libarcsoft_dualcam_refocus_5221_skel.so|6f7c460b0452754d5399903c5054d4987197515a
+odm/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel_21617.so|0d46522555fa04a0097043121fdb1306f8f00537
+odm/lib/rfsa/adsp/libarcsoft_hdrplus_se_hvx_skel.so|0d46522555fa04a0097043121fdb1306f8f00537
+odm/lib/rfsa/adsp/libarcsoft_portraitsn_hvx_skel_21617.so|5f0bc3571ff0c0153783a881b4e617e49c0586ab
+odm/lib/rfsa/adsp/libvdblurless_4.6.10_skel.so|f9c902eb25c60bb21ad44d8abaec5574e8f5af37
+
+# Adreno - martini
 vendor/firmware/a660_gmu.bin|607402e7c1c49f486258e5e02780e74fcf7311e1
 vendor/firmware/a660_sqe.fw|8e6becfbcff6ff6e64b5edb6f135cc6f656d4ee1
 vendor/firmware/a660_zap.b00|f8df59bf1c76d6cceb152cfd58142af4e0cdabb5
@@ -113,7 +123,7 @@ vendor/firmware/a660_zap.b02|bcbdf56fca034c66a9e44242587ed25a1ffe2abe
 vendor/firmware/a660_zap.elf|9540b3afb40528773547efd7666ce21e457a3ad3
 vendor/firmware/a660_zap.mdt|ed0104bb7531683f7cbd38d7007ed86ad41c87a7
 
-# Audio - OOS
+# Audio - martini
 odm/etc/acdbdata/Bluetooth_cal.acdb|9eca5560063d139d3b3defbf892890b315d1e1c7
 odm/etc/acdbdata/General_cal.acdb|1a4b4c13d043dde76bc1c347a544f9511070c996
 odm/etc/acdbdata/Global_cal.acdb|7031dc2a8d0c9e09f5d1b7ed496e21969e5f2b03
@@ -271,6 +281,36 @@ vendor/lib64/libqtigef.so|09fb25411b4767ab2f7eebdccd7cc7fd9a85feee
 vendor/lib64/libstagefright_soft_qtiflacdec.so|de8d1337e5d4e21ab3fadce6df6d5cd4e53da8c7
 vendor/lib64/vendor.qti.voiceprint@1.0.so|065739e8d05515fa4c4aea3d8f3c66beaa3b7a9a
 
+# Audio LVIMFS Params - porsche
+odm/etc/lvimfs_params/LVACFS_Configuration.txt|024b3814ee9d35b2954c253ae1a25311d4724902
+odm/etc/lvimfs_params/LVIMFS_Calibration_2mic.dat|ae8a5e7c7ee1a036ebf19a93d0e4e6ad804421ed
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID10_MIC_VR.txt|88f7c70a4130d70bedd97d134e1073e272c978da
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID11_HE.txt|0a5d772ff1dc53716d4e703d46347e0fdf69e033
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID12_HE_APP1.txt|19141d7068fdea3c0b985995a492bd9b8bbb7dfd
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID13_HE_APP2.txt|c59eafe53fafdcf94e709c7f19bd5db871b5675e
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID14_HE_Cam.txt|1413e507b0061c6fa8a5eb88c7ed6d2f5efd2181
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID15_HE_Conference.txt|0a5d772ff1dc53716d4e703d46347e0fdf69e033
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID16_HE_Fast.txt|e1055d87c05040da32b936af49825129e246ad6f
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID17_HE_Interview.txt|0a5d772ff1dc53716d4e703d46347e0fdf69e033
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID18_HE_Unprocess.txt|fb0b27a784d90bc79fe474056a01b28b9ff63c7c
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID19_HE_Voice.txt|e1055d87c05040da32b936af49825129e246ad6f
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID1_MIC_Normal.txt|9cae6c20ae7f6aba29429f5cdf4d71955718018a
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID20_HE_VR.txt|f919c15fcc89aa2bb6966bba0f667f8ddf833fe4
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID21_USB_Normal.txt|0a5d772ff1dc53716d4e703d46347e0fdf69e033
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID22_USB_APP1.txt|dddd6e08b982615d11b31eda4df7234d684ef0a2
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID23_BT_Normal.txt|7b19eb5eeb82451f0b5ae43d52f1ae636244f4a9
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID24_BT_APP1.txt|7b19eb5eeb82451f0b5ae43d52f1ae636244f4a9
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID2_MIC_APP1.txt|60f9ae4793bbc59f0901d354ce28edce356593ce
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID3_MIC_APP2.txt|33a1ff25c2d071a7aef29d430a3474d2f101b140
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID4_MIC_Cam.txt|821aac891e749706f6a2e09858fc88c0304f04e9
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID5_MIC_Conference.txt|7fa5bfcc73adb7d5c663dc0405eda9f5aacc8a52
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID6_MIC_Fast.txt|f42527d5ed99882a36893213e68dcf4e780f354a
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID7_MIC_Interview.txt|5fd69ee6ca0c4e9d7e4ce46d72e84861f30a68a0
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID8_MIC_Unprocess.txt|e5ce71184101b0252953abeed6cd765dcf394419
+odm/etc/lvimfs_params/LVIMFS_Parameter_ID9_MIC_Voice.txt|3fccde2f0c831d44321f8c71d318e3ec8cc25993
+odm/lib/liblvimfs.so|51955be664d0d88044d212c9f1f96924eeb816f7
+odm/lib/liblvimfs_wrapper.so|d099f079a134900932db8fb2417b4e98e14ea05d
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
@@ -382,7 +422,7 @@ vendor/lib64/libcvp_util.so
 vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
-# CVP - OOS
+# CVP - martini
 vendor/firmware/evass.b00|2595bce1132e8f9bf1832d6aea7c067561095481
 vendor/firmware/evass.b01|fa59e7a315f71ba8c7bce0286c8de3d21ccba8f6
 vendor/firmware/evass.b02|a7966bf9596be7ab4e9b99156695aeaa34d4ef0a
@@ -406,7 +446,87 @@ vendor/firmware/evass.b19|1ceaf73df40e531df3bfb26b4fb7cd95fb7bff1d
 vendor/firmware/evass.mbn|5ebe380b9e0ac917849b8131ee95be03bf9421b8
 vendor/firmware/evass.mdt|836311425157e397981c8967c5abeacf6f77e023
 
-# Camera - OOS
+# Camera - porsche
+odm/etc/camera/CameraHWConfiguration.config:odm/porsche/etc/camera/CameraHWConfiguration.config|45cd21876caeb73cc3d4a3366781040718a6a7b5
+odm/etc/camera/aicolor/duallut_background.bmp|8b519e6f3ddac3a70d5f44c4a3422f5e55275e94
+odm/etc/camera/aicolor/duallut_portrait.bmp|062ce81a821a987a6d856fe8db045e735f97705d
+odm/etc/camera/anc/fusion_model|a205ed1b57ba028545aafe51ae575a9d543685a5
+odm/etc/camera/anc/fusion_model_post|3a7ce24538f4d353c6e331e0c7da30e7257e9309
+odm/etc/camera/anc/video_retention_model|a205ed1b57ba028545aafe51ae575a9d543685a5
+odm/etc/camera/anc/video_retention_model_post|8663703f930195a62b417e385931f857323454f9
+odm/etc/camera/anc/videolut_background.png|276a4270daf5cf86ca39ae420460203ce383457f
+odm/etc/camera/anc/videolut_portrait.png|68bd24339d1d83d90bac3d37f42eefc5026c6cf0
+odm/etc/camera/anc/videolut_portrait_front.png|64ed00a763570491192c71a15a7d1fd83bc30bd5
+odm/etc/camera/camera_engmode.xml:odm/porsche/etc/camera/camera_engmode.xml|379acca1faae070899b94a87379c0b289b5d8970
+odm/etc/camera/config/camera_unit_config:odm/porsche/etc/camera/config/camera_unit_config|04f493171ec51a4dcc9497da0313f1d5bb00b785
+odm/etc/camera/config/camera_unit_feature_config.protobuf:odm/porsche/etc/camera/config/camera_unit_feature_config.protobuf|da76b1087544fa60e4f8c7f9b8e4fff11d8f785d
+odm/etc/camera/config/imx471:odm/porsche/etc/camera/config/imx471|891812cf61f4d384153b15941f59f026e29e4697
+odm/etc/camera/config/imx766:odm/porsche/etc/camera/config/imx766|5b0f811fd74d8f3447a4d495a93212c0332f46f0
+odm/etc/camera/config/oplus_camera_algo_switch_config:odm/porsche/etc/camera/config/oplus_camera_algo_switch_config|321b98327304b99dfc3c5d39ab98af72e0de8600
+odm/etc/camera/config/oplus_camera_aps_config:odm/porsche/etc/camera/config/oplus_camera_aps_config|16ed51200fee543fd8eb2f415eddef5aa7f98a7b
+odm/etc/camera/config/oplus_camera_config:odm/porsche/etc/camera/config/oplus_camera_config|8580f1e0d8535158334e91b2863a0027ae96e8ea
+odm/etc/camera/config/ov02b10|13e5bfebfe2bc57af6d6a7fd5642ebd5d74a4951
+odm/etc/camera/config/ov08d10|e370d10e3905bf169baf1d101aeb54d4176749ea
+odm/etc/camera/eis_camera.vcfg:odm/porsche/etc/camera/eis_camera.vcfg|0cff6ae49512e7d54525debbf6803a219be8f7d6
+odm/etc/camera/filters_lut/Emerald.cube.rgb.bin|f64bb87ff215da400d6d3386282b58e9e9ec9582
+odm/etc/camera/filters_lut/Radiance.cube.rgb.bin|912f9ab680767d2a67e19dfe76cfcafa25ef7099
+odm/etc/camera/filters_lut/Serenity.cube.rgb.bin|ef589cc2f598556fb7c85bcdefa0bcee420ecd23
+odm/etc/camera/filters_lut/blackandwhite.cube.rgb.bin|1c7337313b31ca64337b1947a0e022da5ff9222a
+odm/etc/camera/filters_lut/cola.bin|4eeea9825b7cb116b74e001303225d39ab440a1b
+odm/etc/camera/filters_lut/fuji-eterna-v2.cube.rgb.bin|0512fad051f2de8358801a6baf89ff00a991731d
+odm/etc/camera/filters_lut/fuji.cube.rgb.bin|3a7585d6460817f6ffafb3655a62e8da91e50129
+odm/etc/camera/filters_lut/gourmet.cube.rgb.bin|7a5895bb287dae4fe97dbd28028928b94f02c03f
+odm/etc/camera/filters_lut/jw_sun.CUBE.rgb.bin|3258367ce9deaab8b237226f1e27ecd5c9955305
+odm/etc/camera/filters_lut/jw_surprise.CUBE.rgb.bin|94c2283c79ecc4fecfa9764456bd4e1b81e20942
+odm/etc/camera/filters_lut/kodak.cube.rgb.bin|58156674bd37f8195a7cab919a143cc3b42a39f4
+odm/etc/camera/filters_lut/mono.cube.rgb.bin|8b42ff535b477a3492c240c3e287bec1e9a31257
+odm/etc/camera/filters_lut/morandi.cube.rgb.bin|f4993b9d9b971a8a17f10ad92166e687781ba280
+odm/etc/camera/filters_lut/natural.cube.rgb.bin|b4fe8e09aed3d10cec2fd54bde8f3f2b6c447d06
+odm/etc/camera/filters_lut/vivid-cool.cube.rgb.bin|69ed5b6aaab96fefe25fb23a03c30af4b7c9ebd0
+odm/etc/camera/filters_lut/vivid-lut.cube.rgb.bin|be677422336811409d09a50fed24b27ec917180f
+odm/etc/camera/filters_lut/vivid-warm.cube.rgb.bin|dbd14210764c8a94da19f9a40fcc02637384fccf
+odm/etc/camera/gasryuv_1.2_wp.model:odm/porsche/etc/camera/gasryuv_1.2_wp.model|690e6c00fd300a7ea024aa971b66ac663767a6fa
+odm/etc/camera/gesture/modules/tt_hand_box_reg_v12.0.model|3a20f7832ed58bc9563c9a5dfea26704784d45f4
+odm/etc/camera/gesture/modules/tt_hand_det_v11.0.model|140f926684870d0d74434b172fea824dfc0b0dc0
+odm/etc/camera/gesture/modules/tt_hand_gesture_v11.1.model|4e2e2b88c51986b14a3a80137a313a62a57a0b2d
+odm/etc/camera/gesture/modules/tt_hand_kp_v6.0.model|008b13a07caf7bb3a8bd82794fda3046536572af
+odm/etc/camera/gesture/modules/tt_hand_lr_v3.0.model|e6e0cf8dabc257c539a2055f09ec0be8a127daee
+odm/etc/camera/gesture/tt_hand_box_reg_v12.0.model|3a20f7832ed58bc9563c9a5dfea26704784d45f4
+odm/etc/camera/gesture/tt_hand_det_v11.0.model|140f926684870d0d74434b172fea824dfc0b0dc0
+odm/etc/camera/gesture/tt_hand_gesture_v11.1.model|4e2e2b88c51986b14a3a80137a313a62a57a0b2d
+odm/etc/camera/gesture/tt_hand_kp_v6.0.model|008b13a07caf7bb3a8bd82794fda3046536572af
+odm/etc/camera/gesture/tt_hand_lr_v3.0.model|e6e0cf8dabc257c539a2055f09ec0be8a127daee
+odm/etc/camera/motionblur/model.data|468dfe976065aec4b98b2633c95dd68ac9c33622
+odm/etc/camera/mwStereoParams.bin:odm/porsche/etc/camera/mwStereoParams.bin|6d357fadc52ab95e95c4a92590fe7f7849c8a1c4
+odm/etc/camera/omoji/assets/sdk_assets/ai_face_processor_e47_s1.bundle|2e7127a67f6b61728f3501ecdb29fe623f028d55
+odm/etc/camera/omoji/assets/sdk_assets/controller_cpp.bundle|8112925410eb5aeeb3a476e949aa63ccb3494cf2
+odm/etc/camera/settings_fdc.txt:odm/porsche/etc/camera/settings_fdc.txt|e37d827e800c295636470c24b7b36be1d8b9fcad
+odm/etc/camera/arc_golden.bin|c6fde672b8190597e929bb4274caea7a6ffeea40
+odm/etc/camera/dualcal_golden.bin|6e20b74b3c30fc7adc9a5a5c425e538425e56f40
+odm/lib64/camera/com.qti.sensor.imx471.21617.so:odm/porsche/lib64/camera/com.qti.sensor.imx471.21617.so|7dd214dd4f29b6bdb68d84bd6eef0942a4bedac5
+odm/lib64/camera/com.qti.sensor.imx766.21617.so:odm/porsche/lib64/camera/com.qti.sensor.imx766.21617.so|f9c92b38c54aa4c11215dddbbd40f74bc0720588
+odm/lib64/camera/com.qti.sensor.ov02b10.21617.so:odm/porsche/lib64/camera/com.qti.sensor.ov02b10.21617.so|8b33e165ac4b49fdb13e116d6244e4a628b689d9
+odm/lib64/camera/com.qti.sensor.ov08d10.so:odm/porsche/lib64/camera/com.qti.sensor.ov08d10.so|a917433986ae5f159fda0cd7e965bb27aab1889a
+odm/lib64/camera/com.qti.sensormodule.qtech_imx766_216B2.bin:odm/porsche/lib64/camera/com.qti.sensormodule.qtech_imx766_216B2.bin|168c54b6e05a4edd1022da1b1b49c5be9b342886
+odm/lib64/camera/com.qti.sensormodule.shinetech_ov02b10.bin:odm/porsche/lib64/camera/com.qti.sensormodule.shinetech_ov02b10.bin|db2262df4026acdf312dcecba8bbcf0c16b96813
+odm/lib64/camera/com.qti.sensormodule.shinetech_ov08d10.bin:odm/porsche/lib64/camera/com.qti.sensormodule.shinetech_ov08d10.bin|bfbefb510582ce45cb4fe81723d44e176b8b24cf
+odm/lib64/camera/com.qti.sensormodule.sunny_imx471_216B2.bin:odm/porsche/lib64/camera/com.qti.sensormodule.sunny_imx471_216B2.bin|b75236a4876a73f5d6a8eb4df107c5c9f416084c
+odm/lib64/camera/com.qti.tuned.default.bin:odm/porsche/lib64/camera/com.qti.tuned.default.bin|4665f4429b94eb0deae3c116a4041109bcd01e71
+odm/lib64/camera/com.qti.tuned.sm8350_imx471_sunny_216B2.bin:odm/porsche/lib64/camera/com.qti.tuned.sm8350_imx471_sunny_216B2.bin|a856340eaadc2ccd79342511dc0e5a9a79c1821f
+odm/lib64/camera/com.qti.tuned.sm8350_ov02b10_shinetech.bin:odm/porsche/lib64/camera/com.qti.tuned.sm8350_ov02b10_shinetech.bin|6841036d78627a99bc78b7f3ff91bf00b034b050
+odm/lib64/camera/com.qti.tuned.sm8350_ov08d10_shinetech.bin:odm/porsche/lib64/camera/com.qti.tuned.sm8350_ov08d10_shinetech.bin|facc8698d484f16d658148a0b52249230a00402d
+odm/lib64/camera/com.qti.tuned.sm8350_qtech_imx766_216B2.bin:odm/porsche/lib64/camera/com.qti.tuned.sm8350_qtech_imx766_216B2.bin|53b103354349c3b1ff3d18d449444c2f2528ad8c
+odm/lib64/libancbase_rt_fusion.so|c185c4e77f38a68157b2a532532b39e9679ce2d2
+odm/lib64/libancbase_rt_retain.so|c185c4e77f38a68157b2a532532b39e9679ce2d2
+odm/lib64/libarcsoft_aicolor_image.so|3d0d0c001e94e25f1c73eec226dd90e76ec6f998
+odm/lib64/libarcsoft_aicolor_video.so|0ddd06db4778803dcd03ab8f977f81956b9ce6be
+odm/lib64/libarcsoft_scbokeh_image.so|bb0eac1088b83fe78332c427a4c5c9bd226b698f
+odm/lib64/libarcsoft_super_night_se_raw.so|7ae6a73e59c8ea93f484885f79475c8e9fbfdbd3
+odm/lib64/libmotionblur.so|fb520ec5692f32247fdafa734df0ac0555e75cd9
+odm/lib64/libCaptureBokeh.so|16e8b838b133d9b151fc3036fe6c0e9a8caca9ba
+odm/lib64/libStarMode.so|550ad74744425a8aa81cec9c5f47ff30d2247f04
+
+# Camera - martini
 odm/etc/camera/anc/merged_model|61394a774f909426b2ad981c53739cc34210abc9
 odm/etc/camera/anc/merged_model_post|50a8234454a711f1c19e8dd0e45c8caecb892695
 odm/etc/camera/ancsegbase/anc_cl_kernel.cache|6d84034beebc1b9f210e6885ff8114c0a1a8ee0e
@@ -867,18 +987,18 @@ odm/lib64/camera/arcsoft_calibration_wt.bin|85a277ab96283ca79011109666b881313338
 odm/lib64/camera/arcsoft_dc_calibration_t.bin|09a9a7db650686653b21529ecbd0a65c38ffb5f4
 odm/lib64/camera/arcsoft_dc_calibration_u.bin|1c28e8d987dc4699101fdc372f5f94453c43efb6
 odm/lib64/camera/arcsoft_dc_calibration_w.bin|eadef5ead401e60ee10b7490521eae582044c69a
-odm/lib64/camera/com.qti.sensor.imx471.20820.so|8b40182035a2b57e4652a0f35b8693c2e170af2a
-odm/lib64/camera/com.qti.sensor.imx481.20820.so|2843163c7e2171bb34875b104c467b9b1ddb12d4
-odm/lib64/camera/com.qti.sensor.imx766.20820.so|e541bdd9c8c219ac79b4722cfb9fd20ab61d7db7
-odm/lib64/camera/com.qti.sensor.ov02b.20820.so|e3bf02ebc31ecaf0b92ed35a17172ade65b59f1a
-odm/lib64/camera/com.qti.sensormodule.ofilm_imx481.bin|9c5cecf13c819fb2dbdd80b995d59e88431cf80d
-odm/lib64/camera/com.qti.sensormodule.qtech_imx766.bin|696119350b7d83db02abe58250e3713c0fb8e988
-odm/lib64/camera/com.qti.sensormodule.shine_ov02b.bin|e10e5bd84cde905cbdaf05bbb9d323a4c62c2c2f
-odm/lib64/camera/com.qti.sensormodule.truly_imx471.bin|c9eb7838d390df3ab187f01428ccd52e2bc84e25
-odm/lib64/camera/com.qti.tuned.sm8350_ofilm_imx481_20820.bin|5028c95c7ff242f1c1d9685d52b607d1098587e0
-odm/lib64/camera/com.qti.tuned.sm8350_shine_ov02b_20820.bin|cfd53661bb12d2c600a94c7a96751f711246e8ec
-odm/lib64/camera/com.qti.tuned.sm8350_sunny_imx766_20820.bin|4cdd3a0d64ccdd8044d5ca5d50a1629f4d393844
-odm/lib64/camera/com.qti.tuned.sm8350_truly_imx471_20820.bin|9b5b884ccc14f9e3bfa7969dbe1ce1f3ee88c191
+odm/lib64/camera/com.qti.sensor.imx471.20820.so:odm/martini/lib64/camera/com.qti.sensor.imx471.20820.so|8b40182035a2b57e4652a0f35b8693c2e170af2a
+odm/lib64/camera/com.qti.sensor.imx481.20820.so:odm/martini/lib64/camera/com.qti.sensor.imx481.20820.so|2843163c7e2171bb34875b104c467b9b1ddb12d4
+odm/lib64/camera/com.qti.sensor.imx766.20820.so:odm/martini/lib64/camera/com.qti.sensor.imx766.20820.so|e541bdd9c8c219ac79b4722cfb9fd20ab61d7db7
+odm/lib64/camera/com.qti.sensor.ov02b.20820.so:odm/martini/lib64/camera/com.qti.sensor.ov02b.20820.so|e3bf02ebc31ecaf0b92ed35a17172ade65b59f1a
+odm/lib64/camera/com.qti.sensormodule.ofilm_imx481.bin:odm/martini/lib64/camera/com.qti.sensormodule.ofilm_imx481.bin|9c5cecf13c819fb2dbdd80b995d59e88431cf80d
+odm/lib64/camera/com.qti.sensormodule.qtech_imx766.bin:odm/martini/lib64/camera/com.qti.sensormodule.qtech_imx766.bin|696119350b7d83db02abe58250e3713c0fb8e988
+odm/lib64/camera/com.qti.sensormodule.shine_ov02b.bin:odm/martini/lib64/camera/com.qti.sensormodule.shine_ov02b.bin|e10e5bd84cde905cbdaf05bbb9d323a4c62c2c2f
+odm/lib64/camera/com.qti.sensormodule.truly_imx471.bin:odm/martini/lib64/camera/com.qti.sensormodule.truly_imx471.bin|c9eb7838d390df3ab187f01428ccd52e2bc84e25
+odm/lib64/camera/com.qti.tuned.sm8350_ofilm_imx481_20820.bin:odm/martini/lib64/camera/com.qti.tuned.sm8350_ofilm_imx481_20820.bin|5028c95c7ff242f1c1d9685d52b607d1098587e0
+odm/lib64/camera/com.qti.tuned.sm8350_shine_ov02b_20820.bin:odm/martini/lib64/camera/com.qti.tuned.sm8350_shine_ov02b_20820.bin|cfd53661bb12d2c600a94c7a96751f711246e8ec
+odm/lib64/camera/com.qti.tuned.sm8350_sunny_imx766_20820.bin:odm/martini/lib64/camera/com.qti.tuned.sm8350_sunny_imx766_20820.bin|4cdd3a0d64ccdd8044d5ca5d50a1629f4d393844
+odm/lib64/camera/com.qti.tuned.sm8350_truly_imx471_20820.bin:odm/martini/lib64/camera/com.qti.tuned.sm8350_truly_imx471_20820.bin|9b5b884ccc14f9e3bfa7969dbe1ce1f3ee88c191
 odm/lib64/hwconfigurationutiltest|ef32d88fcaf3756b5665462e189406a7b8b127c0
 odm/lib64/android.hardware.graphics.allocator@2.0.so|dc851a9e348fb1336164fd85c2021f1688c55e77
 odm/lib64/android.hardware.graphics.allocator@3.0.so|6fe00d3ff725a7aa49fce4c98987dc22ae7f2dde
@@ -1207,7 +1327,7 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 
-# Data - OOS
+# Data - martini
 vendor/firmware/ipa_fws.b00|1365a355064949539679b3e4308d50d0de508311
 vendor/firmware/ipa_fws.b01|975e49d839e9bcacecea90c9e54047f6b4072459
 vendor/firmware/ipa_fws.b02|de771411df81d0c4183a698746351ee0943f5901
@@ -1224,9 +1344,13 @@ vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
-# Display Calibration - OOS
+# Display Calibration - martini
 vendor/etc/ltm_config_samsung_ams662zs01_fhd_cmd_mode_dsc_dsi_panel.xml|147b0f81a4f9f80a9fe6643ab4f643b7b1f927a3
 vendor/etc/qdcm_calib_data_samsung_ams662zs01_fhd_cmd_mode_dsc_dsi_panel.xml|f7a304b7ac883cba9ed109b304f37e277bd6d254
+
+# Display Calibration - porsche
+vendor/etc/ltm_config_samsung_ams662zs01_dvt_dsc_cmd_mode_panel.xml|f5e1304bcbdb0a1ddbcfcb89b1db52b96d20dd1c
+vendor/etc/qdcm_calib_data_samsung_ams662zs01_dvt_dsc_cmd_mode_panel.xml|6b674baafcc33834e76016550894d932500be478
 
 # FASTCV
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
@@ -1237,14 +1361,26 @@ vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib64/libfastcvdsp_stub.so
 -vendor/lib64/libfastcvopt.so
 
-# Fingerprint - OOS
-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service|8eee2f15f2f0a97cf3b22c5dbe841656b930a98d
+# Fingerprint - porsche
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service|50db028f82988185c77251df30c3f1b782f04bc0
 odm/bin/init.oplus.fingerprints.sh|950befd6f64d4055bf47ab066a0a1e0080e6191e
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc|5eead2eabcc060ce5d400a779f1e8482732b7012
-odm/lib64/anc.hal.so|6395cc9fc250182a0e9c1101225cd75333b9900a
+odm/lib64/anc.hal.so|738874cac4ce3179255e000dbb7490cb3c3ba9d4
 odm/lib64/hw/fingerprint.goodix_G3.default.so|2a7aa43f49cce7142f89e317980f377419939a0d
 odm/lib64/libgf_hal_G3.so|4b4d146781d0e7004998c99776e3e876064c28be
 odm/lib64/vendor.oplus.hardware.commondcs@1.0.so|64eeee3fc357cdbfb42a41e169983992e55d93da
+odm/vendor/firmware/ancap64.b00|a1d5e2e92b74ef4e6587d4d14eb656adc970d900
+odm/vendor/firmware/ancap64.b01|db09a8d00e9a466f8bd0828497f4544641969fd7
+odm/vendor/firmware/ancap64.b02|96ead207121c4afa7411bf3bc59490a803af1123
+odm/vendor/firmware/ancap64.b03|fa2e7a2ebaccfe2240f6590977eb76fc283ecee7
+odm/vendor/firmware/ancap64.b04|40e2ca4e7f57852c199aea7e5788d4390cbe5ab4
+odm/vendor/firmware/ancap64.b05|63d8ae6cc6b685d0ae4902a5c5c77949decddcb1
+odm/vendor/firmware/ancap64.b06|6a8f6131e4f2dff4bcba854a6981afed3a05ba64
+odm/vendor/firmware/ancap64.b07|2677aab0a4dcb5ecb0aff8439f45eff3e3966543
+odm/vendor/firmware/ancap64.mdt|29028619adbe7128b0c17df2223bca6cca987b16
+-odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml|78ca4f56ed1f5dd48c186718718fd9513629851e
+
+# Fingerprint (Goodix FW) - martini
 odm/vendor/firmware/goodixfp.b00|08806d8365523954d7e7bd6f06518b50c1d6b63d
 odm/vendor/firmware/goodixfp.b01|ca134546600f642672b4c014e6c927dccd0a3429
 odm/vendor/firmware/goodixfp.b02|f0d34ef68a927d00ad44f6d9b1c579131e9566cc
@@ -1254,9 +1390,8 @@ odm/vendor/firmware/goodixfp.b05|30f44785888135774e366787426dfef6a4b789a0
 odm/vendor/firmware/goodixfp.b06|095542b0fe17f266f0131e118d8991ee244d14e1
 odm/vendor/firmware/goodixfp.b07|9c4125ae3a32a36006bee36856bbd0de47a919f8
 odm/vendor/firmware/goodixfp.mdt|efaabe1c9bae6b15b967dc07877e3af2fefd4815
--odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml|78ca4f56ed1f5dd48c186718718fd9513629851e
 
-# Performance - OOS
+# Performance - martini
 odm/lib/vendor.oplus.hardware.performance@1.0.so|eb3c1265cfa15284bd88f03423fe0434f6116fe5
 odm/lib64/vendor.oplus.hardware.performance@1.0.so|b5ff1b8a6da96123fa5052c0ea4f3c8c77db3d50
 
@@ -1614,7 +1749,7 @@ vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
-# RemoteFS - OOS
+# RemoteFS - martini
 vendor/bin/rmt_storage|bd7eb2864e49d7aa0b8fbd7e0839707e3f2ddf60
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 
@@ -1635,7 +1770,7 @@ vendor/lib64/libminkdescriptor.so
 vendor/lib64/libnative-api.so
 vendor/lib64/libqcbor.so
 
-# Sensors - OOS
+# Sensors - martini
 odm/bin/oplus_sensor_fb|0a791739921434ee29b4a5db7fc09a95e92c091e
 odm/etc/sensor/config/lahaina_qrd_ak0991x.json|73eb80bbc0d9532c532b3d71aa72ec42e0719aba
 odm/etc/sensor/config/lahaina_qrd_alsps.json|080436adabcc38bb9d53e597761deb13211ee9db
@@ -1714,6 +1849,15 @@ vendor/lib64/libssc.so|c5f934b119a4baf4123def3b76eb356f881cb108
 vendor/lib64/libssc_default_listener.so|da9e3d83340a83b42554b738d8a72b0350f600d7
 vendor/lib64/sensors.ssc.so|063a0b4aa178c07e49decaa44cd87a69d75d1328
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|7484c4f178837ec83a96c8e390716cde655e231b
+
+# Sensors configs - porsche
+odm/etc/sensor/config/lahaina_qrd_alsps.json:odm/porsche/etc/sensor/config/lahaina_qrd_alsps.json|a38d3ab0224179eff899432f12f58160bebefc44
+odm/etc/sensor/config/lahaina_qrd_cct.json:odm/porsche/etc/sensor/config/lahaina_qrd_cct.json|764f506e205ab4fc68f890b1ca7d5df1b1cd9507
+odm/etc/sensor/config/lahaina_qrd_cct_rear.json:odm/porsche/etc/sensor/config/lahaina_qrd_cct_rear.json|510b245176df9fbd7f412e90331bcbc3ef9adc96
+odm/etc/sensor/config/lahaina_qrd_icm4x6xx.json:odm/porsche/etc/sensor/config/lahaina_qrd_icm4x6xx.json|8ad824d38fbcf422d294e908a5c3d72ab6605772
+odm/etc/sensor/config/lahaina_qrd_mmc56x3x.json:odm/porsche/etc/sensor/config/lahaina_qrd_mmc56x3x.json|358f0bf06e6d8f33cca494d0a8b9fe2a1ee6bffa
+odm/etc/sensor/config/lahaina_qrd_sx933x_0.json:odm/porsche/etc/sensor/config/lahaina_qrd_sx933x_0.json|337f68711fa100949b6b6ff7d4b1a4f759a8769c
+odm/etc/sensor/sensor_config.json:odm/porsche/etc/sensor/sensor_config.json|3ddf59e8564027b59faa343e9e785bf9ae3d3330
 
 # SecureMSM (EID)
 vendor/bin/hw/vendor.qti.hardware.eid@1.0-service
@@ -1794,10 +1938,15 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Touch - OOS
+# Touch firmware - martini
 odm/firmware/tp/20820/FW_S3908_SAMSUNG.img|be74317ff22799a72ca62cdc8d30914a6dbe4772
 odm/firmware/tp/20820/FW_S3908_SAMSUNG_FAE.img|1a968e86046a8230524714ebdd1576540eb1c76c
 odm/firmware/tp/20820/LIMIT_S3908_SAMSUNG.img|26ad8547ea95b97f1a3dd6503212bfee20412fe2
+
+# Touch firmware - porsche
+odm/firmware/tp/21617/FW_FT3658U_SAMSUNG.img|1c584fae29534a7c6710a83da00c4eeb878ebed4
+odm/firmware/tp/21617/FW_FT3658U_SAMSUNG_FAE.img|526e09472f90313c9e8a9df44e5d31d210a856b6
+odm/firmware/tp/21617/LIMIT_FT3658U_SAMSUNG.img|15c633d9a18e4028eeb0edf399730b333dbaae8c
 
 # VPP
 vendor/bin/vppservice
@@ -1815,7 +1964,7 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 
-# VPU - OOS
+# VPU - martini
 vendor/firmware/vpu20_4v.b01|91bf137ef2f764b6208c234ef5554d11b4125a5e
 vendor/firmware/vpu20_4v.b02|2756850def9b5d077cc285ace8feed8896a6526e
 vendor/firmware/vpu20_4v.b03|7772b18b16e520641e8051fd6284384e9b0e1939
@@ -1888,14 +2037,19 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 # WLAN
 vendor/bin/cnss-daemon
 
-# WLAN - OOS
+# WLAN - martini
 odm/etc/wifi/bdwlan.elf|44114f70ae6e801613a4cb2e3cdfc86a5aaa94f7
 odm/etc/wifi/cnss_diag_always_on.conf|7c8d94e909d88205adf3bdb428cb6a39f012cabc
 odm/etc/wifi/regdb.bin|30ff599f33dd4058bc79482d5e2e26a4a98adb95
 vendor/etc/wifi/p2p_supplicant_overlay.conf|05f22cd82cbe806d46185a3e5ce69c86cd307128
 vendor/etc/wifi/wpa_supplicant_overlay.conf|fd618998d3dcd4b3a408807fa629967c378ac45a
 
-# Widevine - OOS
+# WLAN - porsche
+odm/etc/wifi/bdwlang.elf|b07cee3b1fdbb06a9eb692419811b5ca6c0219a9
+odm/etc/wifi/bdwlanw.elf|68d3982e720c8cc52e7863918a56d87340edcd2d
+odm/etc/wifi/regdb.bin:odm/porsche/etc/wifi/regdb.bin|a83440a189fb5dc0e15cdb3b21a15dcf1528f0f1
+
+# Widevine - martini
 odm/bin/hw/android.hardware.drm@1.3-service.widevine|c86a66a295e46195c59a40e8c7d7ea3303f27b5e
 odm/etc/init/android.hardware.drm@1.3-service.widevine.rc|7801ccf2718b30ffac54c4beb88370726a4a86c6
 -odm/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be

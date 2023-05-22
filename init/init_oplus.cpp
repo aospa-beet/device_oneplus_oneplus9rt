@@ -49,6 +49,10 @@ void vendor_load_properties() {
             LOG(ERROR) << "Unexpected project name: " << prjname;
     }
     switch (rf_version) {
+	case 2:
+                OverrideProperty("ro.product.product.model", "RMX3312");
+		OverrideProperty("ro.product.product.device", "RE58B2L1");
+            break;
         case 11: // CN
             if (device == "OnePlus9") {
                 OverrideProperty("ro.product.product.model", "LE2110");

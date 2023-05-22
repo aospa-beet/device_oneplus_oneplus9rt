@@ -42,14 +42,16 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_platform_info_intcodec.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_ODM)/etc/sound_trigger_platform_info.xml \
-    $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/sound_trigger_platform_info.xml
+    $(LOCAL_PATH)/configs/audio/martini/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_ODM)/martini/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/martini/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/martini/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/martini/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/martini/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/martini/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_ODM)/martini/etc/sound_trigger_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/porsche/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_ODM)/porsche/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/porsche/mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/porsche/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/porsche/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/porsche/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/porsche/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_ODM)/porsche/etc/sound_trigger_platform_info.xml \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/martini,$(TARGET_COPY_OUT_VENDOR)/martini/etc/sku_lahaina) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/porsche,$(TARGET_COPY_OUT_VENDOR)/porsche/etc/sku_lahaina)
 
 PRODUCT_PACKAGES += \
     libstdc++.vendor
@@ -178,6 +180,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     init.oplus.camera.rc \
     init.oplus.display.rc \
+    init.oplus.overlay.rc \
     init.oplus.perf.rc \
     init.oplus.sensors.rc \
     init.oplus.telephony.rc \
@@ -226,7 +229,8 @@ PRODUCT_PACKAGES += \
     OnePlus9SeriesFrameworks \
     OnePlus9SeriesSettings \
     OnePlus9SeriesSystemUI \
-    OnePlus9SettingsProvider \
+    MartiniSettingsProvider \
+    PorscheSettingsProvider \
     OnePlus9SystemUI \
     WifiResTarget
 
@@ -326,7 +330,7 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # Vendor
-$(call inherit-product, vendor/oneplus/martini/martini-vendor.mk)
+$(call inherit-product, vendor/oplus/marsche/marsche-vendor.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
