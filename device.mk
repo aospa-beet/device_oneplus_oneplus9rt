@@ -234,6 +234,7 @@ PRODUCT_PACKAGES += \
     OnePlus9SeriesSystemUI \
     MartiniSettingsProvider \
     PorscheSettingsProvider \
+    PorschePowerProfilesOverlay \
     OnePlus9SystemUI \
     WifiResTarget
 
