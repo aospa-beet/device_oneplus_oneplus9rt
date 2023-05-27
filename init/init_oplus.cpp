@@ -7,7 +7,9 @@
 #include <android-base/properties.h>
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <string>
 #include <sys/_system_properties.h>
+#include <vector>
 
 using android::base::GetProperty;
 
@@ -16,16 +18,31 @@ using android::base::GetProperty;
  * does not work for our use case. Write "OverrideProperty" to do practically
  * the same thing as "SetProperty" without this restriction.
  */
-void OverrideProperty(const char* name, const char* value) {
-    size_t valuelen = strlen(value);
+void OverrideProperty(const char *name, const char *value) {
+  size_t valuelen = strlen(value);
 
-    prop_info* pi = (prop_info*)__system_property_find(name);
-    if (pi != nullptr) {
-        __system_property_update(pi, value, valuelen);
-    } else {
-        __system_property_add(name, strlen(name), value, valuelen);
-    }
+  prop_info *pi = (prop_info *)__system_property_find(name);
+  if (pi != nullptr) {
+    __system_property_update(pi, value, valuelen);
+  } else {
+    __system_property_add(name, strlen(name), value, valuelen);
+  }
 }
+
+void property_override(std::string prop, std::string value, bool add = true) {
+  auto pi = (prop_info *)__system_property_find(prop.c_str());
+  if (pi != nullptr) {
+    __system_property_update(pi, value.c_str(), value.length());
+  } else if (add) {
+    __system_property_add(prop.c_str(), prop.length(), value.c_str(),
+                          value.length());
+  }
+}
+
+std::vector<std::string> ro_props_default_source_order = {
+    "bootimage.",  "odm.",    "product.",     "system.",
+    "system_ext.", "vendor.", "vendor_dlkm.", "",
+};
 
 /*
  * Only for read-only properties. Properties that can be wrote to more
@@ -33,62 +50,48 @@ void OverrideProperty(const char* name, const char* value) {
  * after the original property has been set.
  */
 void vendor_load_properties() {
-    auto device = GetProperty("ro.product.product.device", "");
-    auto rf_version = std::stoi(GetProperty("ro.boot.rf_version", "0"));
-    auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
+  auto rf_version = std::stoi(GetProperty("ro.boot.rf_version", "0"));
+  auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
+  std::string brand, device, manufacturer, model, name, fingerprint;
 
-    switch (prjname) {
-        case 20820: // CN
-               OverrideProperty("ro.product.product.model", "MT2110");
-               OverrideProperty("ro.product.product.device", "OP5154L1");
-            break;
-        case 20821: // IN
-               OverrideProperty("ro.product.product.model", "MT2111");
-            break;
-        default:
-            LOG(ERROR) << "Unexpected project name: " << prjname;
+  switch (prjname) {
+  case 20820: // CN
+    OverrideProperty("ro.product.product.model", "MT2110");
+    OverrideProperty("ro.product.product.device", "OP5154L1");
+    break;
+  case 20821: // IN
+    OverrideProperty("ro.product.product.model", "MT2111");
+    break;
+  default:
+    LOG(ERROR) << "Unexpected project name: " << prjname;
+  }
+  switch (rf_version) {
+  case 2:
+    for (const auto &source : ro_props_default_source_order) {
+      brand = "ro.product." + source + "brand";
+      device = "ro.product." + source + "device";
+      manufacturer = "ro.product." + source + "manufacturer";
+      model = "ro.product." + source + "model";
+      name = "ro.product." + source + "name";
+      fingerprint = "ro." + source + "build.fingerprint";
+
+      property_override(brand, "realme", true);
+      property_override(device, "RE58B2L1", true);
+      property_override(manufacturer, "realme", true);
+      property_override(model, "RMX3312", true);
+      property_override(name, "RE58B2L1", true);
+      property_override(fingerprint,
+                        "realme/RMX3312/RE58B2L1:13/TP1A.220905.001/"
+                        "S.d7a144-1-3cc75:user/release-keys",
+                        true);
+      OverrideProperty(
+          "ro.build.description",
+          "qssi-user 13 TP1A.220905.001 1673407054945 release-keys");
+      OverrideProperty("ro.build.product", "RE58B2L1");
+      OverrideProperty("ro.com.google.clientidbase", "android-oppo");
     }
-    switch (rf_version) {
-	case 2:
-                OverrideProperty("ro.product.product.model", "RMX3312");
-		OverrideProperty("ro.product.product.device", "RE58B2L1");
-            break;
-        case 11: // CN
-            if (device == "OnePlus9") {
-                OverrideProperty("ro.product.product.model", "LE2110");
-            } else if (device == "OnePlus9Pro") {
-                OverrideProperty("ro.product.product.model", "LE2120");
-            }
-            break;
-        case 12: // TMO
-            if (device == "OnePlus9") {
-                OverrideProperty("ro.product.product.model", "LE2117");
-            } else if (device == "OnePlus9Pro") {
-                OverrideProperty("ro.product.product.model", "LE2127");
-            }
-            break;
-        case 13: // IN
-            if (device == "OnePlus9") {
-                OverrideProperty("ro.product.product.model", "LE2111");
-            } else if (device == "OnePlus9Pro") {
-                OverrideProperty("ro.product.product.model", "LE2121");
-            }
-            break;
-        case 21: // EU
-            if (device == "OnePlus9") {
-                OverrideProperty("ro.product.product.model", "LE2113");
-            } else if (device == "OnePlus9Pro") {
-                OverrideProperty("ro.product.product.model", "LE2123");
-            }
-            break;
-        case 22: // NA
-            if (device == "OnePlus9") {
-                OverrideProperty("ro.product.product.model", "LE2115");
-            } else if (device == "OnePlus9Pro") {
-                OverrideProperty("ro.product.product.model", "LE2125");
-            }
-            break;
-        default:
-            LOG(ERROR) << "Unexpected RF version: " << rf_version;
-    }
+    break;
+  default:
+    LOG(ERROR) << "Unexpected RF version: " << rf_version;
+  }
 }
