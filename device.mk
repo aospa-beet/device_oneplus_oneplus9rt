@@ -330,7 +330,7 @@ $(call inherit-product, vendor/oplus/marsche/marsche-vendor.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus
+    vendor.qti.hardware.vibrator.service.oplus_marsche
 
 # VNDK
 PRODUCT_COPY_FILES += \
