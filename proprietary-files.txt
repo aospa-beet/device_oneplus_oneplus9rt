@@ -926,8 +926,6 @@ odm/etc/camera/pfb_bin/ThirdPartyPreSkintuneBinary.bin|b133aefe5a6c34a1ffe87bc23
 odm/etc/camera/pfb_bin/ThirdPartyPreSkintuneMRTBinary.bin|0864558068855c74e20ae18351a9df9f947f3257
 odm/etc/camera/pfb_bin/ThirdPartyPreVertFilterBinary.bin|f2aa1ab11230df6eb092371b68b53ff5e2556b7a
 odm/etc/camera/pfb_bin/ThirdPartyPreVertSurBinary.bin|c57b21f11ac7cf7c6aafe8243fe9fccd51e91dd6
-odm/etc/camera/singleblur/license_release.lic|713c460772ee8871f6131d78583e5cdcac87a2fb
-odm/etc/camera/singleblur/license_release.license|5b72665aa0e79c569fd92ad462ba1028ce936897
 odm/etc/camera/sticker/material/animoji/data.zip|e26f389fe389e17f4577ae1698c183848dc79949
 odm/etc/camera/sticker/material/animoji/snowleopard_v_0_0_0_9.zip|aebb9673f46d009573f787c6815764ace68c2df0
 odm/etc/camera/sticker/M_SenseME_Action_5.2.12.model|a9b3a9a8a2d59c438de87137e8d5943eef915d8a
