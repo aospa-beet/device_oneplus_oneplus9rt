@@ -320,7 +320,7 @@ $(call inherit-product, vendor/oneplus/oneplus9rt/oneplus9rt-vendor.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus
+    android.hardware.vibrator-V1-ndk.vendor
 
 # VNDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true

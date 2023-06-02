@@ -1790,6 +1790,18 @@ odm/firmware/tp/20820/FW_S3908_SAMSUNG.img|be74317ff22799a72ca62cdc8d30914a6dbe4
 odm/firmware/tp/20820/FW_S3908_SAMSUNG_FAE.img|1a968e86046a8230524714ebdd1576540eb1c76c
 odm/firmware/tp/20820/LIMIT_S3908_SAMSUNG.img|26ad8547ea95b97f1a3dd6503212bfee20412fe2
 
+# Vibrator (richtap) - Spacewar
+odm/etc/aac_richtap.config
+vendor/bin/hw/vendor.qti.hardware.vibrator.service
+vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
+vendor/lib/hw/vibrator.default.so
+vendor/lib64/hw/vibrator.default.so
+vendor/lib64/libaacvibrator.so
+vendor/lib64/libqtivibratoreffect.so
+vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
+vendor/lib64/vendor.qti.hardware.vibrator.impl.so
+
 # VPP
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
