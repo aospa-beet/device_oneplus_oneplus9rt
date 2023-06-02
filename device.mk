@@ -128,8 +128,6 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Display
-NEED_AIDL_NDK_PLATFORM_BACKEND := true
-
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk.vendor
 
@@ -330,9 +328,11 @@ $(call inherit-product, vendor/oplus/marsche/marsche-vendor.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus_marsche
+    android.hardware.vibrator-V1-ndk_platform.vendor
 
 # VNDK
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
+
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm/arch-arm-armv7-a-neon/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v30.so \
     prebuilts/vndk/v30/arm/arch-arm-armv7-a-neon/shared/vndk-sp/android.hardware.common-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.common-V1-ndk_platform.so \

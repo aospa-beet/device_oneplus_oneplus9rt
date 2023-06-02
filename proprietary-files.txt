@@ -1948,6 +1948,18 @@ odm/firmware/tp/21617/FW_FT3658U_SAMSUNG.img|1c584fae29534a7c6710a83da00c4eeb878
 odm/firmware/tp/21617/FW_FT3658U_SAMSUNG_FAE.img|526e09472f90313c9e8a9df44e5d31d210a856b6
 odm/firmware/tp/21617/LIMIT_FT3658U_SAMSUNG.img|15c633d9a18e4028eeb0edf399730b333dbaae8c
 
+# Vibrator (richtap) - porsche
+odm/etc/aac_richtap.config
+vendor/bin/hw/vendor.qti.hardware.vibrator.service
+vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
+vendor/lib/hw/vibrator.default.so
+vendor/lib64/hw/vibrator.default.so
+vendor/lib64/libaacvibrator.so
+vendor/lib64/libqtivibratoreffect.so
+vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
+vendor/lib64/vendor.qti.hardware.vibrator.impl.so
+
 # VPP
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
