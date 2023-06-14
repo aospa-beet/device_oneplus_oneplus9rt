@@ -123,6 +123,9 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Display
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/display/display_id_4630946728207028354.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946728207028354.xml
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk.vendor
 
