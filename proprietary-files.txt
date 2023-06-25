@@ -1790,17 +1790,16 @@ odm/firmware/tp/20820/FW_S3908_SAMSUNG.img|be74317ff22799a72ca62cdc8d30914a6dbe4
 odm/firmware/tp/20820/FW_S3908_SAMSUNG_FAE.img|1a968e86046a8230524714ebdd1576540eb1c76c
 odm/firmware/tp/20820/LIMIT_S3908_SAMSUNG.img|26ad8547ea95b97f1a3dd6503212bfee20412fe2
 
-# Vibrator (richtap) - Spacewar
-odm/etc/aac_richtap.config
-vendor/bin/hw/vendor.qti.hardware.vibrator.service
-vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.default.so
-vendor/lib64/libaacvibrator.so
-vendor/lib64/libqtivibratoreffect.so
-vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
-vendor/lib64/vendor.qti.hardware.vibrator.impl.so
+# Vibrator (richtap) - OOS
+odm/etc/aac_richtap.config|df3f8b898115ae0a594e527427d5645004c66ff5
+odm/bin/hw/vendor.qti.hardware.vibrator.service:vendor/bin/hw/vendor.qti.hardware.vibrator.service|c60064d0bc46c9610dbbcbb994ace87491473fb2
+odm/etc/init/vendor.qti.hardware.vibrator.service.rc:vendor/etc/init/vendor.qti.hardware.vibrator.service.rc|ad28420546402643b827e4d8e015477e92cecc23
+odm/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml:vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml|08a0ebee8a556b352fff4bf9981c4beff71bb26f
+odm/lib64/libaacvibrator.so:vendor/lib64/libaacvibrator.so|58667a52ad4a7f658c507f4ebf8d5697140111ee
+odm/lib64/libqtivibratoreffect.so:vendor/lib64/libqtivibratoreffect.so|6dc81d483055fb8336c8d2cff7d37bf91aa5c6cc
+odm/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so:vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so|34268c7b3f6fbd0af19464b3a6178fbaa95029f5
+odm/lib64/vendor.aac.hardware.richtap.vibrator-V2-ndk_platform.so:vendor/lib64/vendor.aac.hardware.richtap.vibrator-V2-ndk_platform.so|ca6439e1f9904bd524206a4011912423c84f9e06
+odm/lib64/vendor.qti.hardware.vibrator.impl.so:vendor/lib64/vendor.qti.hardware.vibrator.impl.so|e22f922d010871ddcf5db0eb0ed754ad0ef141df
 
 # VPP
 vendor/bin/vppservice
