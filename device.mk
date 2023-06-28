@@ -143,6 +143,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FaceSense
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.face.sense_service.camera_id=1
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
