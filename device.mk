@@ -42,5 +42,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus9rt
 
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
 # Call the proprietary setup
 $(call inherit-product, vendor/oneplus/oneplus9rt/oneplus9rt-vendor.mk)
