@@ -22,3 +22,6 @@ include device/oneplus/sm8350-common/BoardConfigCommon.mk
 
 # Include proprietary files
 include vendor/oneplus/oneplus9rt/BoardConfigVendor.mk
+
+# OTA
+TARGET_OTA_ASSERT_DEVICE := oneplus9rt,OP5154L1,OP5155L1
