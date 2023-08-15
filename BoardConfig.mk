@@ -14,6 +14,9 @@
 
 DEVICE_PATH := device/oneplus/oneplus9rt
 
+# Display
+TARGET_SCREEN_DENSITY := 480
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/device_framework_compatibility_matrix.xml
 
