@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, device/oneplus/oneplus9/device.mk)
 
+# Display
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/display/display_id_4630946728207028354.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946728207028354.xml
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus9rt
