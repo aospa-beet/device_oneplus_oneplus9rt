@@ -53,6 +53,23 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        odm/etc/camera/CameraHWConfiguration.config)
+            sed -i "/SystemCamera = / s/1;/0;/g" "${2}"
+            ;;
+        vendor/lib64/hw/com.qti.chi.override.so)
+            "${SIGSCAN}" -p "45 B8 05 94" -P "1F 20 03 D5" -f "${2}"
+            ;;
+        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+            "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
+            ;;
+	odm/lib64/libui.so|odm/lib64/libAlgoProcess.so)
+            "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V1-ndk_platform.so" "android.hardware.graphics.common-V1-ndk.so" "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper.
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
